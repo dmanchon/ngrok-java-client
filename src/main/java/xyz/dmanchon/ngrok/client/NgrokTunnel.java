@@ -17,7 +17,7 @@ import java.util.UUID;
  * @author dmanchon
  */
 public class NgrokTunnel {
-    public static String url;
+    private String url;
     private String name;
     private final String ngrokAddr;
     
@@ -44,6 +44,10 @@ public class NgrokTunnel {
     
     public  NgrokTunnel(int port) throws UnirestException {        
         this("http://127.0.0.1:4040", port);        
+    }
+    
+    public String url() {
+        return url;
     }
         
     public void close() throws IOException, UnirestException {
