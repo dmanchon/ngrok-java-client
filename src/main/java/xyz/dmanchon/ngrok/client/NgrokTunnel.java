@@ -42,7 +42,7 @@ public class NgrokTunnel {
         this.url = jsonResponse.getBody().getObject().getString("public_url");
     }
     
-    public  NgrokTunnel(int port) throws UnirestException {        
+    public NgrokTunnel(int port) throws UnirestException {        
         this("http://127.0.0.1:4040", port);        
     }
     
