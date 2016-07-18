@@ -1,25 +1,24 @@
 # ngrok-java-client
 
-* Add the github repo to maven:
+* For example jitpack can be used to get the dependecy from a github repo:
 
 ```
-    <repositories>
-        <repository>
-             <id>git-dmanchon</id>
-             <name>dmanchon's Git based repo</name>
-             <url>https://github.com/dmanchon/ngrok-java-client/raw/master/</url>
-         </repository>
-    </repositories>
+<repositories>
+  <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+  </repository>
+</repositories>
 ```
 
 * Include the dependency:
 
 ```
-    <dependency>
-       <groupId>xyz.dmanchon</groupId>
-        <artifactId>ngrok-java-client</artifactId>
-        <version>0.1-SNAPSHOT</version>
-    </dependency>
+<dependency>
+    <groupId>com.github.dmanchon</groupId>
+    <artifactId>ngrok-java-client</artifactId>
+    <version>0.1-SNAPSHOT</version>
+</dependency>  
 ```
 
 * Start ngrok:
@@ -42,7 +41,7 @@ $ ngrok start --none
     NgrokTunnel tunnel = new NgrokTunnel("http://127.0.0.1:4040", 8080);
 
     ...
-    
+
     //Get the public url:
     String url = tunnel.url();
 
